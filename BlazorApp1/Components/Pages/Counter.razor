@@ -29,12 +29,23 @@
     <p>@text2</p>
 </div>
 
+<div class="m-4">
+    <input type="text3" 
+        @bind="text3" 
+        @bind:event="oninput"
+        @bind:after="Search" />
+    <p>@text3</p>
+    <p>@result</p>
+</div>
+
 
 @code {
     private int currentCount = 0;
     string text = "";
     string text2 = "";
+    string text3 = "";
     string divText = "";
+    string result = "";
 
     [Parameter]
     public int IncrementAmount { get; set; } = 1;
@@ -57,5 +68,12 @@
     private void HandleKeyDown(KeyboardEventArgs e)
     {
         text2 = $"Key Pressed: {e.Key}";
+    }
+
+    async Task Search()
+    {
+        await Task.Delay(500); // Simulate a delay for searching
+        text3 = $"Search for: {text3}";
+        result = text.Length > 5 ? "Found" : "Not Found";
     }
 }

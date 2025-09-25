@@ -6,3 +6,6 @@ full video: https://www.youtube.com/watch?v=CpbRAWgFBRQ
     > you can also add parameters
 - Events
     > add onclick, mouseover, keydown, blur
+- Data Binding
+    > One way - only display the value
+    > Two way - data flows in both direction
