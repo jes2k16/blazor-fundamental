@@ -1,24 +1,22 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using Syncfusion.Blazor.Notifications;
 
 namespace UI_KIT.Components.Layout
 {
+
     public partial class Sidebar
     {
-        [Inject]
-        private NavigationManager NavigationManager { get; set; }
-        private bool SidebarToggle { get; set; } = true;
-
+        public SfToast? ToastInfo;
+        public SfToast? ToastWarning;
         public bool IsSidebarOpen = true;
         public bool IsBackdropVisible = false;
 
         public List<MenuItem> Data = new List<MenuItem>
         {
-            new MenuItem { Id = 1, FontIcon = "e-home" },
-            new MenuItem { Id = 2, FontIcon = "e-user" },
-            new MenuItem { Id = 3, FontIcon = "e-bookmark" },
-            new MenuItem { Id = 4, FontIcon = "e-chart" },
-            new MenuItem { Id = 5, FontIcon = "e-clock" }
+            new MenuItem { Field = "Home", FontIcon = "e-icons e-home" },
+            new MenuItem { Field = "My Dashboard", FontIcon = "e-icons e-grid-view" },
+            new MenuItem { Field = "Notifications", FontIcon = "sf-icon-notification-bell-01" }
         };
 
         [JSInvokable]
@@ -33,8 +31,9 @@ namespace UI_KIT.Components.Layout
 
         public class MenuItem
         {
-            public int Id { get; set; }
+            public string Field { get; set; } = string.Empty;
             public string FontIcon { get; set; } = string.Empty;
         }
     }
+
 }
