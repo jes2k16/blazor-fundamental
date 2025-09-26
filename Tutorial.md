@@ -21,3 +21,11 @@ full video: https://www.youtube.com/watch?v=CpbRAWgFBRQ
     > we now have two projects, the server and the client
     > only the counter page is in the client project, because this is the only one that is interactable, all are static or server mode
 
+
+- CRUD - 
+- Create a new server mode project
+- 
+
+
+
+Build a Customer Support Portal 5X Faster with Blazor UI Kit: https://www.youtube.com/watch?v=Ofh6oRtfnvw

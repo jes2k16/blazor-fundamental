@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en"  class="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    
+    <link href="_content/Syncfusion.Blazor.Themes/tailwind.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/ui-kit/font-icons/tailwind-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="@Assets["UI-KIT.styles.css"]" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/scripts/tailwind-extend.js"></script>
+    
+    <ImportMap />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <HeadOutlet @rendermode="InteractiveServer" />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // NOTE: In this demo, different shades of "Indigo" are used as primary colors.
+                        primary: {
+                            "50": "#eef2ff",
+                            "100": "#e0e7ff",
+                            "200": "#c7d2fe",
+                            "300": "#a5b4fc",
+                            "400": "#818cf8",
+                            "500": "#6366f1",
+                            "600": "#4f46e5",
+                            "700": "#4338ca",
+                            "800": "#3730a3",
+                            "900": "#312e81",
+                            "950": "#1e1b4b"
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <Routes @rendermode="InteractiveServer" />
+    <script src="_framework/blazor.web.js"></script>
+</body>
+
+</html>

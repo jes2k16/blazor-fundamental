@@ -1,0 +1,27 @@
+﻿@namespace UI_KIT.Components.Layout
+@inject NavigationManager Navigation
+
+<section class="bg-white dark:bg-gray-950">
+    <div class="flex relative" style="height: 600px;">
+        <SfSidebar class="bg-gray-50 dark:bg-gray-900 !border-r !border-gray-200 dark:!border-gray-700" Width="72px" IsOpen="@IsSidebarOpen" ShowBackdrop="@IsBackdropVisible" Type="SidebarType.Push" aria-label="main navigation menu" role="complementary">
+            <div class="pt-6">
+                <div class="flex justify-center items-center mb-3 px-3">
+                    <img src="assets/images/common/brand-logos/svg/vector.svg" alt="company logo" />
+                </div>
+                <SfListView class="border-0 e-bigger" DataSource="@Data" aria-label="quick navigation links" role="list">
+                    <ListViewFieldSettings TValue="MenuItem"></ListViewFieldSettings>
+                    <ListViewTemplates TValue="MenuItem">
+                        <Template>
+                            <div class="e-list-wrapper flex justify-center items-center">
+                                <span class="e-large e-icons @context.FontIcon"></span>
+                            </div>
+                        </Template>
+                    </ListViewTemplates>
+                </SfListView>
+            </div>
+        </SfSidebar>
+        <div class="p-3 bottom-0 left-0 absolute !right-full" style="z-index: 1000;">
+            <SfButton CssClass="e-large e-icons e-chevron-left e-round" Type="button" aria-label="expand/collapse menu" role="button"></SfButton>
+        </div>
+    </div>
+</section>
