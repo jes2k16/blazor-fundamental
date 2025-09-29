@@ -14,9 +14,9 @@ namespace UI_KIT.Components.Layout
 
         public List<MenuItem> Data = new List<MenuItem>
         {
-            new MenuItem { Field = "Home", FontIcon = "e-icons e-home" },
-            new MenuItem { Field = "My Dashboard", FontIcon = "e-icons e-grid-view" },
-            new MenuItem { Field = "Notifications", FontIcon = "sf-icon-notification-bell-01" }
+            new MenuItem { Field = "Home", FontIcon = "e-icons e-home", Route = "/" },
+            new MenuItem { Field = "Lead Management", FontIcon = "e-icons e-grid-view", Route = "/customers" },
+            new MenuItem { Field = "Notifications", FontIcon = "sf-icon-notification-bell-01", Route = "/notifications" }
         };
 
         [JSInvokable]
@@ -33,6 +33,7 @@ namespace UI_KIT.Components.Layout
         {
             public string Field { get; set; } = string.Empty;
             public string FontIcon { get; set; } = string.Empty;
+            public string Route { get; set; } = string.Empty;
         }
     }
 

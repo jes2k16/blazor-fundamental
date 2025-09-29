@@ -1,0 +1,147 @@
+@page "/news"
+@namespace UI_KIT.Components.Pages
+
+<PageTitle>News - XTradingView</PageTitle>
+
+<div class="p-6">
+    <div class="mb-6">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white">News</h1>
+        <p class="text-gray-600 dark:text-gray-400 mt-2">Stay informed with the latest market news and updates</p>
+    </div>
+
+    <!-- News Categories -->
+    <div class="flex flex-wrap gap-2 mb-6">
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">All News</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Market Updates</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Company News</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Analysis</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Breaking News</button>
+    </div>
+
+    <!-- Featured News -->
+    <div class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Featured News</h2>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/3">
+                    <div class="h-48 md:h-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                        <span class="e-icons e-trending-up text-white text-6xl"></span>
+                    </div>
+                </div>
+                <div class="md:w-2/3 p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Breaking</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">2 hours ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Market Reaches All-Time High Amid Strong Economic Data</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">The stock market surged to record levels today following the release of better-than-expected employment figures and GDP growth data. Analysts predict continued momentum in the coming weeks.</p>
+                    <button class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium">Read Full Article →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- News Article 1 -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="h-48 bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center">
+                <span class="e-icons e-chart-line text-white text-4xl"></span>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center mb-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Market Update</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">4 hours ago</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Tech Stocks Rally on AI Innovation News</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Major technology companies see significant gains following announcements of breakthrough AI developments and partnerships.</p>
+                <button class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium">Read More →</button>
+            </div>
+        </div>
+
+        <!-- News Article 2 -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="h-48 bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center">
+                <span class="e-icons e-dollar text-white text-4xl"></span>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center mb-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Analysis</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">6 hours ago</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Federal Reserve Signals Interest Rate Changes</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Economic experts analyze the potential impact of upcoming monetary policy decisions on market performance.</p>
+                <button class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium">Read More →</button>
+            </div>
+        </div>
+
+        <!-- News Article 3 -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center">
+                <span class="e-icons e-globe text-white text-4xl"></span>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center mb-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Company News</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">8 hours ago</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Global Expansion Announced by Leading Fintech</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Major fintech company reveals plans for international expansion into emerging markets across Asia and Europe.</p>
+                <button class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium">Read More →</button>
+            </div>
+        </div>
+
+        <!-- News Article 4 -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="h-48 bg-gradient-to-r from-red-400 to-pink-500 flex items-center justify-center">
+                <span class="e-icons e-trending-down text-white text-4xl"></span>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center mb-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Market Alert</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">10 hours ago</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Energy Sector Faces Volatility Concerns</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Oil and gas companies experience mixed performance amid changing regulatory environment and supply chain challenges.</p>
+                <button class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium">Read More →</button>
+            </div>
+        </div>
+
+        <!-- News Article 5 -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="h-48 bg-gradient-to-r from-indigo-400 to-blue-500 flex items-center justify-center">
+                <span class="e-icons e-settings text-white text-4xl"></span>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center mb-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">Technology</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">12 hours ago</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Blockchain Adoption Accelerates in Finance</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Financial institutions increasingly adopt blockchain technology for improved security and transaction efficiency.</p>
+                <button class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium">Read More →</button>
+            </div>
+        </div>
+
+        <!-- News Article 6 -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="h-48 bg-gradient-to-r from-teal-400 to-green-500 flex items-center justify-center">
+                <span class="e-icons e-leaf text-white text-4xl"></span>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center mb-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">ESG</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">1 day ago</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Sustainable Investment Funds Gain Momentum</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">ESG-focused investment products attract record inflows as investors prioritize environmental and social responsibility.</p>
+                <button class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium">Read More →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-8">
+        <button class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">Load More Articles</button>
+    </div>
+</div>

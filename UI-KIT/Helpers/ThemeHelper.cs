@@ -7,3 +7,4 @@ public static class ThemeHelper
         return Theme.Tailwind;
     }
 }
+

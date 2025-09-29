@@ -13,43 +13,37 @@
                         <ListViewFieldSettings TValue="MenuItem"></ListViewFieldSettings>
                         <ListViewTemplates TValue="MenuItem">
                             <Template>
-                                <div class="e-list-wrapper flex items-center justify-between pr-2">
-                                    <div class="text-base leading-6 flex items-center">
-                                        <span class="e-icons text-base @context.FontIcon"></span>
-                                        <span class="font-normal pl-4">@context.Field</span>
+                                <a href="@context.Route" class="block hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-lg mx-2 px-2 py-2">
+                                    <div class="e-list-wrapper flex items-center justify-between pr-2">
+                                        <div class="text-base leading-6 flex items-center">
+                                            <span class="e-icons text-base @context.FontIcon"></span>
+                                            <span class="font-normal pl-4">@context.Field</span>
+                                        </div>
+                                        @if (@context.Field == "Notifications")
+                                        {
+                                            <span class="e-badge e-badge-info e-badge-pill !px-1.5 e-bigger">99+</span>
+                                        }
                                     </div>
-                                    @if (@context.Field == "Notifications")
-                                    {
-                                        <span class="e-badge e-badge-info e-badge-pill !px-1.5 e-bigger">99+</span>
-                                    }
-                                </div>
+                                </a>
                             </Template>
                         </ListViewTemplates>
                     </SfListView>
                 </div>
                 <hr class="border-gray-200 dark:border-gray-700 m-4" />
-                <SfAccordion class="bg-transparent !border-0" role="button">
-                    <AccordionItems>
-                        <AccordionItem IconCss="e-icons e-file-new e-medium" CssClass="!border-0">
-                            <HeaderTemplate>
-                                <div class="text-base font-normal pl-2">News</div>
-                            </HeaderTemplate>
-                        </AccordionItem>
-                        <AccordionItem IconCss="e-icons e-agenda-date-range e-medium" CssClass="!border-0">
-                            <HeaderTemplate>
-                                <div class="text-base font-normal pl-2">Events</div>
-                            </HeaderTemplate>
-                        </AccordionItem>
-                        <AccordionItem IconCss="e-icons e-user e-medium" CssClass="!border-0">
-                            <HeaderTemplate>
-                                <div class="text-base font-normal pl-2">People</div>
-                            </HeaderTemplate>
-                            <ContentTemplate>
-                                <div></div>
-                            </ContentTemplate>
-                        </AccordionItem>
-                    </AccordionItems>
-                </SfAccordion>
+                <div class="space-y-1 px-2">
+                    <a href="/news" class="flex items-center px-4 py-2 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-lg">
+                        <span class="e-icons e-file-new text-base mr-4"></span>
+                        News
+                    </a>
+                    <a href="/events" class="flex items-center px-4 py-2 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-lg">
+                        <span class="e-icons e-agenda-date-range text-base mr-4"></span>
+                        Events
+                    </a>
+                    <a href="/people" class="flex items-center px-4 py-2 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-lg">
+                        <span class="e-icons e-user text-base mr-4"></span>
+                        People
+                    </a>
+                </div>
                 <div id="toastmsg" class="!absolute" style="bottom: 25%;"></div>
                 <SfToast @ref="ToastInfo" CssClass="e-toast-info" Width="224px" ShowCloseButton="true" Timeout="0" Target="#toastmsg" NewestOnTop="true">
                     <ToastEvents Created="@(async () => await ToastInfo?.ShowAsync())"></ToastEvents>

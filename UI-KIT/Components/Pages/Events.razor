@@ -1,0 +1,213 @@
+@page "/events"
+@namespace UI_KIT.Components.Pages
+
+<PageTitle>Events - XTradingView</PageTitle>
+
+<div class="p-6">
+    <div class="mb-6">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Events</h1>
+        <p class="text-gray-600 dark:text-gray-400 mt-2">Discover upcoming market events, earnings calls, and important dates</p>
+    </div>
+
+    <!-- Event Filters -->
+    <div class="flex flex-wrap gap-2 mb-6">
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">All Events</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Earnings</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Conferences</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Webinars</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Economic Data</button>
+    </div>
+
+    <!-- Calendar View Toggle -->
+    <div class="flex justify-between items-center mb-6">
+        <div class="flex space-x-2">
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">List View</button>
+            <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Calendar View</button>
+        </div>
+        <button class="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center">
+            <span class="e-icons e-plus mr-2"></span>
+            Add Event
+        </button>
+    </div>
+
+    <!-- Today's Events -->
+    <div class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Today's Events</h2>
+        <div class="space-y-4">
+            <!-- Event 1 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 border-l-4 border-red-500">
+                <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Earnings</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">9:00 AM EST</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Apple Inc. (AAPL) Quarterly Earnings Call</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Q3 2024 earnings announcement and management discussion</p>
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span class="e-icons e-location mr-1"></span>
+                            Virtual Event
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">Join</button>
+                        <button class="px-3 py-1 bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">Remind Me</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 border-l-4 border-blue-500">
+                <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Webinar</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">2:00 PM EST</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">AI in Financial Trading: Future Trends</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Expert panel discussion on artificial intelligence applications in trading</p>
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span class="e-icons e-location mr-1"></span>
+                            Online Webinar
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">Register</button>
+                        <button class="px-3 py-1 bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">Remind Me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Events -->
+    <div class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Upcoming Events</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Event Card 1 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                    <span class="e-icons e-agenda-date-range text-white text-4xl"></span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">Conference</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Oct 15, 2024</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">FinTech Innovation Summit</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Annual conference featuring the latest innovations in financial technology and digital banking.</p>
+                    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        <span class="e-icons e-location mr-1"></span>
+                        New York, NY
+                    </div>
+                    <button class="w-full px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
+                    <span class="e-icons e-chart-line text-white text-4xl"></span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Economic Data</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Oct 18, 2024</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Federal Reserve Meeting</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">FOMC meeting to discuss monetary policy and potential interest rate changes.</p>
+                    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        <span class="e-icons e-location mr-1"></span>
+                        Washington, DC
+                    </div>
+                    <button class="w-full px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">Track Event</button>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center">
+                    <span class="e-icons e-user text-white text-4xl"></span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Webinar</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Oct 22, 2024</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Cryptocurrency Market Analysis</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Deep dive into current crypto market trends and future predictions with industry experts.</p>
+                    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        <span class="e-icons e-location mr-1"></span>
+                        Online Event
+                    </div>
+                    <button class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Register Now</button>
+                </div>
+            </div>
+
+            <!-- Event Card 4 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center">
+                    <span class="e-icons e-trending-up text-white text-4xl"></span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Earnings</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Oct 25, 2024</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Tesla Q3 Earnings Release</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Quarterly financial results and forward guidance from Tesla Inc.</p>
+                    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        <span class="e-icons e-location mr-1"></span>
+                        Virtual Event
+                    </div>
+                    <button class="w-full px-4 py-2 bg-yellow-600 text-white rounded-lg text-sm font-medium hover:bg-yellow-700 transition-colors">Set Alert</button>
+                </div>
+            </div>
+
+            <!-- Event Card 5 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center">
+                    <span class="e-icons e-globe text-white text-4xl"></span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Conference</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Nov 2, 2024</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Global Investment Forum</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">International conference bringing together investment professionals from around the world.</p>
+                    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        <span class="e-icons e-location mr-1"></span>
+                        London, UK
+                    </div>
+                    <button class="w-full px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-medium hover:bg-red-700 transition-colors">View Details</button>
+                </div>
+            </div>
+
+            <!-- Event Card 6 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="h-32 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
+                    <span class="e-icons e-settings text-white text-4xl"></span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">Workshop</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Nov 8, 2024</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Advanced Trading Strategies</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Hands-on workshop covering advanced trading techniques and risk management strategies.</p>
+                    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        <span class="e-icons e-location mr-1"></span>
+                        Chicago, IL
+                    </div>
+                    <button class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center">
+        <button class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">Load More Events</button>
+    </div>
+</div>
